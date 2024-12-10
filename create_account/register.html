@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Metadados -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CODIGO DA FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- FIM DO CODIGO DA FONTE  -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="#" media="screen">
+
+    <!-- Título da página (aparece na aba) -->
+    <title>Cadastro</title>
+
+    
+<style>
+/* CSS */
+
+/* Todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #003079;
+    background: linear-gradient(to left, #ffffff, #003079);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+}
+
+.interface{
+    background-color: #ffffff;
+    /* Reduzi o padding para melhor visualização */
+    border-radius: 35.56px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 650px;
+    height: 1050px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Elementos com o ID "titulo" */
+#titulo {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #35383F;
+    font-size: 36px; /* Ajuste o tamanho da fonte conforme necessário */   
+    margin-top: 24px;
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+} 
+
+/* Elementos de tag <fieldset>*/
+fieldset {
+    border: 0;
+}
+
+/* Elementos de classe "campo" */
+.campo {
+    margin-bottom: 20px;
+    display: inline-block; /* Para colocar os campos lado a lado */
+    width: calc(50% - 25px); /* Define a largura dos campos para 50% menos a margem */
+}
+
+/* Elementos de classe "campo" de tag <label> */
+.campo label {
+    margin-bottom: 5px;
+    color: #0000008a;
+    display: block;
+    margin-left: 43px;
+    font-weight: 400;
+}
+
+.asterisco {
+    color: red;
+}
+
+/* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="password"],
+.campo input[type="tel"],
+.campo input[type="file"],
+.campo select {
+    padding: 10px;
+    border: 0px solid #59429d;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.082);
+    background-color: #EEEEEE;
+    display: block;
+    width: 80%; /* Largura total */
+    margin-left: 40px;
+    border-radius: 8.89px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.campoexperiencia label {
+    margin-bottom: 5px;
+    color: #0000008a;
+    display: block;
+    margin-left: 43px;
+    font-weight: 400;
+}
+
+textarea {
+    width: 85%;
+    height: 145px;
+    padding: 6px;
+    resize: none; /* Impede que o usuário redimensione o textarea */
+    border: none;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.082);
+    background-color: #EEEEEE;
+    display: block;
+    margin-left: 40px;
+    border-radius: 8.89px;
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.pergunta_texto{
+    margin-top: 30px;
+    margin-left: 45px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 85%;
+    font-weight: 500;
+    color: rgb(255, 0, 0);
+    border-top: 1px solid rgba(255, 0, 0, 0.534);
+    padding-top: 15px;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.534);
+    padding-bottom: 15px;
+    font-size: 14px;
+    background-color: #EEEEEE;
+
+}
+
+/* Elemento de classe "botao" */
+.botao {
+    text-align: center; /* Alinha os botões no centro da div */
+}
+
+.botao a {
+    text-decoration: none; /* Remove a decoração de link */
+}
+
+.botao button {
+    font-weight: 700;
+    padding: 10px 40px; /* Preenchimento interno dos botões */
+    font-size: 18px; /* Tamanho da fonte dos botões */
+    background-color: #003079; /* Cor de fundo dos botões */
+    color: #ffffff; /* Cor do texto dos botões */
+    border: none; /* Remove a borda dos botões */
+    border-radius: 8.89px; /* Borda arredondada dos botões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.397); /* Adiciona sombra */
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.botao button:hover {
+    background-color: #0056b3; /* Cor de fundo dos botões ao passar o mouse */
+    color: #FFE500;
+}
+
+nav ul{
+    margin-top: 13px;
+    list-style-type: none;
+    color: #FFE500;
+}
+  
+nav ul li{
+    padding: 5px;
+    text-align: center;
+    
+}
+
+nav ul li a{
+    color: #0056b3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li a:hover{
+    color: #FFE500;
+}
+
+/* Elementos de classe botão e de tag <select> */
+select{
+    cursor: pointer;
+}
+
+
+.erro {
+    color: red;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+        
+
+        /* Estilos para o modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 700;
+            position: relative; /* Adiciona position relative */
+        }
+
+        .close {
+            color: #003079;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #FFE500;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        
+</style>
+<!--  -->
+<!--  -->
+
+</head>
+<body>
+    <div class="interface">
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <h1 id="titulo">Criar conta!</h1>
+            <br>
+        </div>
+
+        <!-- Início do formulário -->
+        <form id="meuFormulario" onsubmit="return validarSenhas()" method="POST" enctype="multipart/form-data" action="register.php">
+
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="nomecompleto">Nome completo<span class="asterisco">*</span></label>
+                    <input type="text" placeholder="José da Silva Santos" name="nomecompleto" id="nomecompleto" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cpf">CPF<span class="asterisco">*</span></label>
+                    <input type="text" placeholder="123.456.789-00" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 123.456.789-00" required>
+                </div>
+            </fieldset> <!-- Fim Nome e cpf -->
+
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="senha">Senha<span class="asterisco">*</span></label>
+                    <input type="password" placeholder="Pass137*" name="senha" id="senha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmarsenha">Confirme a senha<span class="asterisco">*</span><span id="mensagemErro" class="erro"></span></label>
+                    <input type="password" placeholder="Pass137*" name="confirmarsenha" id="confirmarsenha" required>
+                </div>
+            </fieldset> <!-- Fim Senhas -->
+
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="telefone">Telefone<span class="asterisco">*</span></label>
+                    <input type="tel" placeholder="(99) 99999-9999" name="telefone" id="telefone" pattern="\(\d{2}\) \d{5}-\d{4}" title="Formato: (99) 99999-9999" required>
+                </div>
+
+                <div class="campo">
+                    <label for="datanascimento">Data de nascimento<span class="asterisco">*</span></label>
+                    <input type="text" placeholder="dd/mm/aaaa" name="datanascimento" id="datanascimento" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(19|20)\d{2}$" title="Formato: dd/mm/aaaa" required>
+                </div>
+            </fieldset> <!-- Fim Telefone e Data de nascimento -->
+
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="genero">Gênero<span class="asterisco">*</span></label>
+                    <select id="genero" name="genero" required>
+                        <option selected disabled value="">Selecione o gênero</option>
+                        <option>Feminino</option>
+                        <option>Masculino</option>
+                        <option>Outro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="enviarcurriculo">Enviar currículo (PDF ou DOCX)</label>
+                    <input type="file" name="enviarcurriculo" id="enviarcurriculo" accept=".pdf, .docx">
+                </div>
+            </fieldset> <!-- Fim Gênero e Currículo -->
+
+            <!-- Caixa de texto -->
+            <div class="campoexperiencia">
+                <label for="experiencia">Experiências anteriores:<span class="asterisco">*</span></label>
+                <textarea name="experiencia" placeholder="(Caso já tenha anexado o currículo, digite algum caractere para prosseguir.)" id="experiencia" rows="10" cols="50" required></textarea>
+            </div>
+
+
+            <!-- caixa de perguntas para recuperar a senha -->
+            <p class="pergunta_texto">Responda as perguntas e lembre-se de anotar suas respostas em um lugar seguro para que, caso esqueça sua senha, consiga alterá-la facilmente!</p>
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="pergunta1">1 - Qual foi o nome da sua primeira escola? <span class="asterisco">*</span></label>
+                    <input type="text" placeholder="Resposta" name="pergunta1" id="pergunta1" required>
+                </div>
+
+                <div class="campo">
+                    <label for="pergunta2">2 - Qual era o nome do seu primeiro animal de estimação? <span class="asterisco">*</span></span></label>
+                    <input type="text" placeholder="Resposta" name="pergunta2" id="pergunta2" required>
+                </div>
+            </fieldset>
+            
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="pergunta3">3- Qual é o nome do seu filme favorito? <span class="asterisco">*</span></label>
+                    <input type="text" placeholder="Resposta" name="pergunta3" id="pergunta3" required>
+                </div>
+
+                <div class="campo">
+                    <label for="pergunta4">4 - Qual é o nome do seu melhor amigo de infância? <span class="asterisco">*</span></span></label>
+                    <input type="text" placeholder="Resposta" name="pergunta4" id="pergunta4" required>
+                </div>
+            </fieldset> <!-- Fim Peguntas -->
+
+            <!-- Botão para enviar o formulário -->
+            <div class="botao">
+                <br>
+                <button type="submit">Inscrever-se</button>
+            </div>
+            <nav class="tenho-conta">
+                <ul>
+                    <li><a onclick= "window.location.href='../login/login.php'">Já tenho uma conta!</a></li>
+                </ul>
+            </nav>
+
+        </form>
+    </div>
+
+    <!-- Modal para exibir mensagens -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        function validarSenhas() {
+            var senha = document.getElementById('senha').value;
+            var confirmarSenha = document.getElementById('confirmarsenha').value;
+            var mensagemErro = document.getElementById('mensagemErro');
+
+            if (senha !== confirmarSenha) {
+                mensagemErro.textContent = " Senhas diferentes.";
+                return false;
+            }
+
+            mensagemErro.textContent = ""; // Limpar a mensagem de erro se as senhas forem iguais
+            return true;
+        }
+
+        // Função para exibir o modal com uma mensagem
+        function showModal(message) {
+            var modal = document.getElementById("myModal");
+            var modalMessage = document.getElementById("modalMessage");
+            modalMessage.textContent = message;
+            modal.style.display = "block";
+
+            // Fecha o modal quando o usuário clica no "x"
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+                modal.style.display = "none";
+            };
+
+            // Fecha o modal quando o usuário clica fora do modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        }
+
+        // Verifica se há uma mensagem passada pelo PHP via query string
+        window.onload = function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('message')) {
+                showModal(urlParams.get('message'));
+            }
+        };
+    </script>
+</body>
+
+</html>
