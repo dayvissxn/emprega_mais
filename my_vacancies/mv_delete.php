@@ -78,7 +78,7 @@ if ($result_inscrito->num_rows > 0) {
 
             if ($stmt_delete_usuario_vaga->execute()) {
                 // Inscrição cancelada com sucesso
-                header("Location: minhas_vagas.php?msg=inscricao_deletada");
+                header("Location: minhas_vagas_html.php?msg=inscricao_deletada");
                 exit();
             } else {
                 echo "Erro ao cancelar a inscrição na tabela do usuário: " . $stmt_delete_usuario_vaga->error;

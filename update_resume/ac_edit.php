@@ -68,6 +68,6 @@ mysqli_stmt_close($stmt);
 mysqli_close($mysqli);
 
 // Redirecionar para uma página de sucesso ou onde você desejar
-header("Location: atualizar_curriculo.php"); // Altere para a página que deseja redirecionar após a atualização
+header("Location: atualizar_curriculo_html.php"); // Altere para a página que deseja redirecionar após a atualização
 exit();
 ?>

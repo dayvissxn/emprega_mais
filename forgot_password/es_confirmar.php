@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Verifica se uma pergunta foi selecionada
     if (empty($pergunta)) {
         $_SESSION['erro'] = 'Por favor, selecione uma pergunta.';
-        header('Location: esqueceu_senha.php');
+        header('Location: esqueceu_senha_html.php');
         exit();
     }
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             break;
         default:
             $_SESSION['erro'] = 'Pergunta inválida. Tente novamente.';
-            header('Location: esqueceu_senha.php');
+            header('Location: esqueceu_senha_html.php');
             exit();
     }
 
@@ -46,16 +46,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Verifica se a resposta está correta
         if (trim($row['resposta_correta']) === trim($resposta)) { // Utilizando trim() para evitar espaços
             $_SESSION['id_usuario'] = $row['id'];
-            header("Location: es_edit.php");
+            header("Location: es_edit_html.php");
             exit();
         } else {
             $_SESSION['erro'] = 'Resposta incorreta. Tente novamente.';
-            header('Location: esqueceu_senha.php');
+            header('Location: esqueceu_senha_html.php');
             exit();
         }
     } else {
         $_SESSION['erro'] = 'CPF inválido.';
-        header('Location: esqueceu_senha.php');
+        header('Location: esqueceu_senha_html.php');
         exit();
     }
 

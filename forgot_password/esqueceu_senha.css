@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    background: linear-gradient(to right, #ffff, #003079);
+}
+
+.white-box {
+    background-color: #ffffff;
+    border-radius: 35.56px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo no topo do contêiner */
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px; /* Espaço entre o topo do contêiner e o conteúdo */
+}
+
+#titulo {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #35383F;
+    font-size: 40px; /* Ajuste o tamanho da fonte conforme necessário */
+} 
+
+.es_texto{
+    text-align: center;
+    font-size: 17px;
+    color: #35383F;
+    width: 450px;
+    margin-bottom: 40px;
+}
+
+input{
+    padding: 10px;
+    width: 300px;
+    height: 16px; /* Ajuste a altura conforme necessário */
+    border: none;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.082);
+    background-color: #EEEEEE;
+    display: block;
+    border-radius: 8.89px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top:20px;
+}
+select{
+    padding: 10px;
+    width: 320px;
+    height: 35px; /* Ajuste a altura conforme necessário */
+    border: none;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.082);
+    background-color: #EEEEEE;
+    display: block;
+    border-radius: 8.89px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top:20px;
+    cursor: pointer;
+}
+
+.botao_confirmar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px; /* Empurra o botão para a parte inferior do contêiner */
+
+}
+
+.botao_confirmar button {
+    font-weight: 700;
+    padding: 10px 40px; /* Preenchimento interno dos botões */
+    font-size: 20px; /* Tamanho da fonte dos botões */
+    background-color: #003079; /* Cor de fundo dos botões */
+    color: #ffffff; /* Cor do texto dos botões */
+    border: none; /* Remove a borda dos botões */
+    border-radius: 8.89px; /* Borda arredondada dos botões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.397); /* Adiciona sombra */
+    cursor: pointer;
+}
+
+.botao_confirmar button:hover {
+    background-color: #0056b3; /* Cor de fundo dos botões ao passar o mouse */
+    color: #FFE500;
+    
+}
+
+li{
+    text-align: center;
+    list-style-type: none;
+    margin-top: 13px;
+    
+}
+a{
+    color: #0056b3;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+ 
+}
+
+a:hover{
+    color: #FFE500;
+}
+
+.erro-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    width: 80%;
+    max-width: 320px;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+/* Estilo para o botão de fechar (X) */
+.erro-box button {
+    background: none;
+    border: none;
+    color: #721c24;
+    font-weight: bold;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}

@@ -10,7 +10,7 @@ if (!isset($_SESSION['id_usuario']) || !isset($_SESSION['nome_completo'])) {
 
 $id_usuario = $_SESSION['id_usuario'];
 $nome_completo = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] : 'Nome não definido';
-$cpf = isset($_SESSION['cpf']) ? $_SESSION['cpf'] : '';  
+$cpf = isset($_SESSION['cpf']) ? $_SESSION['cpf'] : '';
 $telefone = isset($_SESSION['telefone']) ? $_SESSION['telefone'] : '';
 $data_nascimento = isset($_SESSION['data_nascimento']) ? $_SESSION['data_nascimento'] : '';
 $genero = isset($_SESSION['genero']) ? $_SESSION['genero'] : '';
@@ -113,4 +113,3 @@ if ($result_inscrito->num_rows > 0) {
 }
 
 $conn->close();
-?>

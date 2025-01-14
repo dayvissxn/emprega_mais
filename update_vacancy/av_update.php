@@ -70,7 +70,7 @@ if (isset($_POST['id'])) {
     }
 
     $conn->close();
-    header("Location: atualizar_vaga.php");
+    header("Location: atualizar_vaga_html.php");
     exit();
 } else {
     echo "ID da vaga não especificado.";

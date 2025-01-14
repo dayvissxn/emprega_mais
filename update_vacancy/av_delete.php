@@ -31,20 +31,16 @@ if (isset($_POST['id'])) {
             } else {
                 echo "Erro ao excluir a tabela correspondente: " . $conn->error;
             }
-
         } else {
             echo "Erro ao excluir a vaga: " . $conn->error;
         }
-
     } else {
         echo "Vaga não encontrada.";
     }
 
     $conn->close();
-    header("Location: atualizar_vaga.php");
+    header("Location: atualizar_vaga_html.php");
     exit();
 } else {
     echo "ID da vaga não especificado.";
 }
-?>
-

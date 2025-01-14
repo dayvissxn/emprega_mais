@@ -1,0 +1,723 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Inicio HEADER */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  max-width: 1100px;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.logo_header img {
+  width: 250px; /* Define a largura da imagem */
+  height: 180px; /* Define a altura da imagem */
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+header a {
+  color: #003079;
+  text-decoration: none;
+  font-size: 22px;
+  display: inline-block;
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.vagas:hover {
+  opacity: 0.6;
+}
+
+.sobre_nos:hover {
+  opacity: 0.6;
+}
+
+/* Container do dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo do botão */
+.dropbtn {
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.dropbtn i {
+  color: #003079;
+  font-size: 60px;
+}
+
+.dropbtn img {
+  max-width: 60px; /* Define uma largura máxima */
+  min-width: 60px;
+  max-height: 60px; /* Define uma altura máxima */
+  min-height: 60px;
+  width: auto; /* Mantém a proporção da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 50%; /* Para fazer a imagem ficar circular */
+  border: 3px solid #003079;
+}
+
+/* Conteúdo do dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 8.89px;
+  overflow: hidden;
+}
+
+/* Links do dropdown */
+.dropdown-content a {
+  color: #35383f;
+  padding: 12px 16px;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Mudança de cor ao passar o mouse */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar o dropdown ao passar o mouse sobre o botão */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mudança de cor do botão ao passar o mouse */
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+}
+
+/* Ajuste para alinhar os ícones com o texto */
+.dropdown-content a {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+}
+
+.dropdown-content a i {
+  margin-right: 20px; /* Espaçamento entre o ícone e o texto */
+  font-size: 18px; /* Tamanho do ícone */
+  color: #003079;
+}
+
+/* Fim HEADER */
+
+/* Inicio BANNER */
+banner {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 180px;
+  background-color: #003079;
+}
+
+.container_banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  width: 900px;
+}
+.icon_banner {
+  margin: 0px;
+}
+
+.icon_banner {
+  position: relative; /* Para posicionar o texto dentro deste contêiner */
+}
+
+.icon_banner img {
+  display: block;
+  height: 180px;
+  width: 1100px;
+  margin-right: 25px;
+}
+
+.texto_banner {
+  position: absolute;
+  top: 53%;
+  left: 65%;
+  transform: translate(-50%, -50%); /* Centraliza o texto na imagem */
+  color: white; /* Define a cor do texto */
+  text-align: center;
+}
+
+.texto_banner h1 {
+  font-size: 44px;
+  margin-bottom: -22px;
+  margin-left: 5px;
+}
+
+.texto_banner h2 {
+  font-size: 90px;
+}
+
+.texto_banner h1,
+.texto_banner h2 {
+  margin: 0;
+}
+
+.texto_banner h1 {
+  margin-bottom: -15px;
+  margin-left: -10px;
+}
+/* Fim BANNER */
+
+/* Inicio MAIN */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  width: 100%;
+}
+
+.container_main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: flex-start;
+  padding: 15px;
+  width: 100%;
+  max-width: 1100px;
+  background-color: #eee;
+  box-sizing: border-box;
+}
+
+/* Inicio Caixa de pesquisa */
+.container_buscar {
+  display: flex;
+  padding-top: 25px;
+  height: 120px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.campo_buscar {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  box-sizing: border-box;
+}
+
+.campo_empresa {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  box-sizing: border-box;
+}
+
+.campo_buscar label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 5px;
+  color: #35383f;
+}
+.caixa_buscar {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  width: 100%;
+
+  height: 45px;
+  padding: 0 5px;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.541);
+  background-color: #eeeeee;
+  border-radius: 8.89px;
+  box-sizing: border-box;
+}
+
+.input_vaga {
+  border: none;
+  padding: 0 5px;
+  margin: 0px 10px 0px 5px;
+  flex-grow: 1;
+  height: 30px;
+  background-color: #eeeeee;
+  font-size: 15px;
+  width: 100%;
+}
+
+i {
+  margin-right: 5px;
+  color: #35383f;
+}
+
+.campo_empresa label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 5px;
+  color: #35383f;
+}
+.caixa_empresa {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  width: 100%;
+  height: 45px;
+  padding: 0 5px;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.541);
+  background-color: #eeeeee;
+  border-radius: 8.89px;
+}
+
+.input_empresa {
+  border: none;
+  padding: 0 5px;
+  width: 100%;
+  margin: 0px 10px 0px 5px;
+  flex-grow: 1;
+  height: 30px;
+  background-color: #eeeeee;
+  font-size: 15px;
+}
+
+.botao_buscar_vagas {
+  display: flex;
+  width: 20%;
+  margin-left: 15px;
+}
+
+.botao_buscar_vagas button {
+  font-weight: 700;
+  margin-top: 30px;
+  width: 90%;
+  height: 45px;
+  font-size: 20px;
+  background-color: #003079;
+  color: #ffffff;
+  border: none;
+  border-radius: 8.89px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.397);
+  cursor: pointer;
+}
+
+.botao_buscar_vagas button:hover {
+  background-color: #0056b3; /* Cor de fundo dos botões ao passar o mouse */
+  color: #ffe500;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+  .container_buscar {
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: auto;
+  }
+
+  .campo_buscar,
+  .campo_empresa,
+  .botao_buscar_vagas {
+    width: 95%;
+    margin-right: 0;
+  }
+
+  .campo_empresa {
+    margin-top: 5px;
+  }
+  .caixa_buscar,
+  .caixa_empresa {
+    width: 100%;
+    height: 40px;
+  }
+
+  .botao_buscar_vagas button {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+  }
+}
+/* Fim Caixa de pesquisa */
+
+/* Inicio Caixa de vagas */
+.container_vagas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: stretch;
+  background-color: #eee;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 40px;
+  justify-content: space-between;
+  width: 100%;
+}
+.container_vagas h1 {
+  width: 100%;
+  margin-top: 0px;
+  margin-left: 10px;
+  font-size: 30px;
+  color: #35383f;
+}
+
+.container_vagas .white-box {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 355px;
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo no topo do contêiner */
+  align-items: left;
+  flex-direction: column;
+  padding: 20px; /* Espaço entre o topo do contêiner e o conteúdo */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: transform 0.1s ease;
+}
+
+.container_vagas .white-box:hover {
+  transform: scale(1.02); /* Aumenta o botão em 10% ao passar o mouse */
+}
+
+input,
+textarea {
+  border: none;
+  resize: none;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+input,
+textarea[readonly] {
+  border: none;
+}
+input,
+textarea[readonly]:focus {
+  outline: none;
+  border: none;
+}
+
+.nome_empresa {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px;
+}
+
+.nome input {
+  width: 100%;
+  border: none;
+  font-size: 23px;
+  color: #35383f;
+}
+
+.empresa input {
+  width: 97%;
+  border: none;
+  font-size: 16px;
+  margin-left: 9px;
+  color: #808080;
+}
+
+.l_qv_d {
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.l_qv_d input {
+  font-size: 13px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  color: #35383f;
+}
+
+.l_qv_d i {
+  font-size: 16px;
+  color: #35383f;
+}
+
+.localidade input {
+  width: 70%;
+}
+
+.quantidade_vagas input {
+  width: 70%;
+}
+
+.disponivel input {
+  width: 82%;
+}
+
+.t_e_ch {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.t_e_ch input {
+  font-size: 13px;
+  margin-left: 5px;
+
+  color: #35383f;
+}
+
+.t_e_ch i {
+  font-size: 16px;
+  color: #35383f;
+}
+
+.tipo input {
+  width: 75%;
+}
+
+.escolaridade input {
+  width: 75%;
+}
+
+.carga_horaria input {
+  width: 75%;
+}
+
+.descricao_vaga textarea {
+  width: 100%;
+  height: 85px;
+  margin-top: 25px;
+  resize: none;
+  display: block;
+  font-size: 15px;
+  color: #35383f;
+}
+
+.botao_candidatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.botao_candidatar .candidatar {
+  font-weight: 700;
+  width: 100%;
+  height: 50px;
+  font-size: 20px; /* Tamanho da fonte dos botões */
+  background-color: #003079; /* Cor de fundo dos botões */
+  color: #ffffff; /* Cor do texto dos botões */
+  border: none; /* Remove a borda dos botões */
+  border-radius: 8.89px; /* Borda arredondada dos botões */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.397); /* Adiciona sombra */
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.botao_candidatar .candidatar:hover {
+  background-color: #0056b3; /* Cor de fundo dos botões ao passar o mouse */
+  color: #ffe500;
+}
+
+.botao_candidatar .inscrito {
+  font-weight: 700;
+  width: 100%;
+  height: 50px;
+  font-size: 20px; /* Tamanho da fonte dos botões */
+  background-color: #ffffff; /* Cor de fundo dos botões */
+  color: #003079; /* Cor do texto dos botões */
+  border: 3px solid #003079; /* Remove a borda dos botões */
+  border-radius: 8.89px; /* Borda arredondada dos botões */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.397); /* Adiciona sombra */
+  cursor: pointer;
+  margin-top: 5px;
+}
+@media screen and (max-width: 1029px) {
+  .container_vagas {
+    display: flex;
+    justify-content: center;
+  }
+  .container_vagas h1 {
+    text-align: center;
+  }
+
+  .container_vagas .white-box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .container_vagas .white-box {
+    height: 390px;
+  }
+}
+/* Fim Caixa de vagas */
+/* Fim MAIN */
+
+/* Inicio FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  background-color: #003079;
+}
+a {
+  text-decoration: none;
+}
+.container_footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 3.5rem;
+  background-color: #003079;
+  height: 180px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo_footer img {
+  width: 150px; /* Define a largura da imagem */
+  height: 50px; /* Define a altura da imagem */
+  margin-bottom: 0.75rem;
+  margin-left: 15px;
+}
+
+.social_media_footer {
+  display: flex;
+  gap: 2rem;
+}
+
+.social_media_footer .footer_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #ffffff;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+.social_media_footer .footer_link:hover {
+  opacity: 0.8;
+}
+.social_media_footer i {
+  font-size: 1.25rem;
+  color: #eee;
+  margin-left: 5px;
+}
+.social_media_footer i:hover {
+  color: #ffe500;
+}
+
+#location {
+  background-color: #c50000;
+}
+
+#instagram {
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+  background-color: #4267b3;
+}
+
+.lista_footer {
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.lista_footer .footer_link {
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.lista_footer .footer_link:hover {
+  color: #ffe500;
+}
+
+#fl_ajuda {
+  margin-left: 60px;
+}
+
+.copyright_footer {
+  display: flex;
+  justify-content: center;
+  background-color: #041a3b;
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 1.3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container_footer {
+    grid-template-columns: repeat(2, 1fr);
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .container_footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    height: 370px;
+    padding: 0;
+  }
+  #fl_ajuda {
+    margin-left: 0px;
+  }
+
+  .contatos_footer {
+    margin-top: 30px;
+  }
+
+  .lista_footer {
+    margin-top: 40px;
+  }
+}
+/* Fim FOOTER */

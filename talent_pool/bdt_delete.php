@@ -19,7 +19,7 @@ if (isset($_POST['id'])) {
     // Obtém o CPF e libera o resultado
     if ($stmt_get_cpf->fetch()) {
         $stmt_get_cpf->close(); // Fecha o statement
-       
+
         // Modifica o CPF para gerar o nome da tabela
         $cpf_modificado = str_replace(['.', '-'], '_', $cpf);
         $nome_tabela = "usuario_" . $id . "_" . $cpf_modificado;
@@ -42,19 +42,18 @@ if (isset($_POST['id'])) {
     $sql = "DELETE FROM usuarios WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
-    
+
     if ($stmt->execute()) {
         echo "Usuário excluído com sucesso!";
     } else {
         echo "Erro ao excluir o usuário: " . $conn->error;
     }
-    
+
     $stmt->close();
-    header("Location: banco_de_talentos.php");
+    header("Location: banco_de_talentos_html.php");
     exit();
 } else {
     echo "ID do usuário não informado.";
 }
 
 $conn->close();
-?>

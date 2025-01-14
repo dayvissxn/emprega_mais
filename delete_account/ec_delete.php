@@ -39,26 +39,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } else {
                 $_SESSION['mensagem'] = "Erro ao excluir a conta: " . mysqli_error($mysqli);
                 $_SESSION['tipo_mensagem'] = "erro";
-                header("Location: excluir_conta.php");
+                header("Location: excluir_conta_html.php");
                 exit();
             }
         } else {
             // Senha incorreta, exibir mensagem de erro
             $_SESSION['mensagem'] = "Senha incorreta. Por favor, tente novamente.";
             $_SESSION['tipo_mensagem'] = "erro";
-            header("Location: excluir_conta.php");
+            header("Location: excluir_conta_html.php");
             exit();
         }
     } else {
         $_SESSION['mensagem'] = "Erro ao buscar a conta. Por favor, tente novamente.";
         $_SESSION['tipo_mensagem'] = "erro";
-        header("Location: excluir_conta.php");
+        header("Location: excluir_conta_html.php");
         exit();
     }
 
     mysqli_close($mysqli);
 } else {
-    header("Location: excluir_conta.php");
+    header("Location: excluir_conta_html.php");
     exit();
 }
 ?>

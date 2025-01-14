@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         mysqli_close($mysqli);
 
         // Redirecionar de volta para a página de alteração de dados
-        header("Location: alterar_dados_pessoais.php");
+        header("Location: alterar_dados_pessoais_html.php");
         exit();
     } else {
         $_SESSION['mensagem'] = "Sessão expirada. Faça login novamente.";

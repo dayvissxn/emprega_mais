@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #003079;
+  background: linear-gradient(to right, #ffffff 20%, #003079);
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+}
+
+/* PARTE ESQUERDA */
+.container_left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 40px;
+  padding-top: 5%;
+  align-self: flex-start;
+}
+
+.container_left .configurar_vagas h1 {
+  color: #35383f;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 27px;
+  margin-bottom: 42px;
+  margin-top: 38px;
+}
+
+.button-container {
+  display: block;
+  background-color: transparent;
+  min-width: 200px;
+  z-index: 1;
+  margin-left: 20px;
+}
+
+/* Links do button-container */
+.button-container a {
+  color: #35383f;
+  padding: 12px 16px;
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  margin-top: -6px;
+}
+
+/* Mudança de cor ao passar o mouse */
+.button-container a:hover {
+  background-color: #f1f1f1;
+  color: #35383f;
+  border-radius: 8.89px;
+}
+
+/* Ajuste para alinhar os ícones com o texto */
+.button-container a {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.button-container a i {
+  margin-right: 27px; /* Espaçamento entre o ícone e o texto */
+  font-size: 22px; /* Tamanho do ícone */
+  color: #35383f;
+}
+
+/* Especifico para separar texto do icon*/
+.button-container .criar_vaga_btn i {
+  margin-right: 29px; /* Ajuste o valor conforme necessário */
+}
+
+.button-container .candidatos_btn i {
+  font-size: 23px;
+  margin-left: 1px;
+  margin-right: 30px; /* Ajuste o valor conforme necessário */
+}
+
+.button-container .banco_de_talentos_btn i {
+  margin-right: 30px; /* Ajuste o valor conforme necessário */
+}
+
+.button-container .voltar_btn i {
+  margin-right: 28px; /* Ajuste o valor conforme necessário */
+}
+/* FIM PARTE ESQUERDA */
+
+/* PARTE DIREITA */
+
+form {
+  display: flex;
+  margin-top: 140px;
+}
+
+.caixa_pesquisar {
+  display: flex;
+  align-items: center;
+  width: 435px;
+  height: 45px;
+  padding: 0 5px;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input_pesquisar {
+  border: none;
+  padding: 0 5px;
+  margin: 0px 10px 0px 5px;
+  flex-grow: 1;
+  height: 30px;
+  background-color: #ffff;
+  font-size: 15px;
+  width: 100%;
+}
+
+.caixa_pesquisar i {
+  margin-left: 5px;
+  color: #808080;
+}
+
+.botao_buscar {
+  display: flex;
+  margin-left: 40px;
+}
+
+.botao_buscar button {
+  font-weight: 500;
+  padding: 5px 50px;
+  font-size: 20px;
+  background-color: #003079;
+  color: #ffffff;
+  border: none;
+  border-radius: 8.89px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.botao_buscar button:hover {
+  background-color: #0056b3; /* Cor de fundo dos botões ao passar o mouse */
+  color: #ffe500;
+}
+
+table {
+  margin-top: 50px;
+}
+
+.table th,
+.table td {
+  vertical-align: middle; /* Alinha verticalmente ao meio */
+}
+
+/* Cor do fundo cabeçalho */
+thead {
+  background-color: #ffffff; /* Cor de fundo azul */
+  text-align: center;
+}
+
+/* Cor do fundo impares */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #759dc2; /* Cor azul */
+}
+
+/* Cor do fundo pares */
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #ffffff; /* Cor branca */
+}
+
+/* Cor da linhas das tabelas e bordas */
+.table-bordered {
+  border: 1px solid #000; /* Cor da borda da tabela */
+}
+
+.table-bordered th,
+.table-bordered td,
+.table-bordered tr {
+  border: 1px solid #000; /* Cor da borda das células */
+  padding: 3px 15px;
+}
+
+.excluir {
+  font-weight: 500;
+  padding: 3px 25px; /* Preenchimento interno dos botões */
+  font-size: 15px; /* Tamanho da fonte dos botões */
+  background-color: #9a1b1b;
+  color: #ffffff; /* Cor do texto dos botões */
+  border: none; /* Remove a borda dos botões */
+  border-radius: 8.89px; /* Borda arredondada dos botões */
+  cursor: pointer;
+}
+
+.excluir:hover {
+  background-color: #d81919; /* Cor de fundo dos botões ao passar o mouse */
+  color: #ffe500;
+}
+
+.visualizar {
+  font-weight: 500;
+  padding: 3.5px 17px; /* Preenchimento interno dos botões */
+  font-size: 15px; /* Tamanho da fonte dos botões */
+  background-color: #0f921c;
+  color: #ffffff; /* Cor do texto dos botões */
+  border: none; /* Remove a borda dos botões */
+  border-radius: 8.89px; /* Borda arredondada dos botões */
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.visualizar:hover {
+  background-color: #37b944; /* Cor de fundo dos botões ao passar o mouse */
+  color: #ffe500;
+}
+
+/* Estilos existentes */
+
+/* Estilos responsivos */
+@media (max-width: 1754px) {
+  .container_right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container_right .white-box {
+    margin-left: 0px;
+
+    width: 700px;
+  }
+}
+
+@media (max-width: 950px) {
+  body {
+    flex-direction: column; /* Muda para coluna em telas menores */
+  }
+
+  .container_left,
+  .container_right {
+    width: 100%; /* Ocupa a largura total em telas menores */
+  }
+
+  .container_left {
+    padding: 20px; /* Ajusta o padding conforme necessário */
+  }
+
+  .container_right {
+    margin-top: 20px; /* Adicione margem conforme necessário */
+    justify-content: flex-start;
+    padding: 20px;
+  }
+}

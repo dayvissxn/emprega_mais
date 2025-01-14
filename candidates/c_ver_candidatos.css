@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  margin: 0;
+  height: 100vh; /* Certifique-se de que a altura do body ocupe toda a altura da viewport */
+  background-color: #003079;
+  background: linear-gradient(to right, #cecdcd, #00307993, #cecdcd);
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo no topo do contêiner */
+  align-items: center; /* Centraliza a tabela verticalmente */
+  flex-direction: column;
+}
+
+.infos {
+  width: 80%; /* Define a largura da tabela para 80% da largura da tela */
+  max-width: 1000px; /* Define um máximo de largura para a tabela */
+  margin-top: 60px;
+}
+
+.vaga-id {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: -5px;
+}
+
+.nome-id {
+  color: #35383f;
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: -10px;
+}
+
+.empresa-id {
+  color: #35383f;
+  padding-bottom: 16px;
+  font-weight: 300;
+  font-size: 20px;
+  border-bottom: 2px solid #35383f;
+}
+
+form {
+  display: flex;
+  width: 80%; /* Define a largura da tabela para 80% da largura da tela */
+  max-width: 1000px; /* Define um máximo de largura para a tabela */
+}
+
+.caixa_pesquisar {
+  display: flex;
+  align-items: center;
+  width: 695px;
+  height: 45px;
+  padding: 0 5px;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input_pesquisar {
+  border: none;
+  padding: 0 5px;
+  margin: 0px 10px 0px 5px;
+  flex-grow: 1;
+  height: 30px;
+  background-color: #ffff;
+  font-size: 15px;
+  width: 100%;
+}
+
+.caixa_pesquisar i {
+  margin-left: 5px;
+  color: #808080;
+}
+
+.botao_buscar {
+  display: flex;
+  margin-left: 40px;
+}
+
+.botao_buscar button {
+  font-weight: 500;
+  padding: 5px 93px;
+  font-size: 25px;
+  background-color: #003079;
+  color: #ffffff;
+  border: none;
+  border-radius: 8.89px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.botao_buscar button:hover {
+  background-color: #0056b3; /* Cor de fundo dos botões ao passar o mouse */
+  color: #ffe500;
+}
+
+table {
+  margin-top: 50px;
+  width: 80%; /* Define a largura da tabela para 80% da largura da tela */
+  max-width: 1000px; /* Define um máximo de largura para a tabela */
+}
+
+.table th,
+.table td {
+  vertical-align: middle; /* Alinha verticalmente ao meio */
+}
+
+/* Cor do fundo cabeçalho */
+thead {
+  background-color: #ffffff; /* Cor de fundo azul */
+  text-align: center;
+}
+
+/* Cor do fundo impares */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #759dc2; /* Cor azul */
+}
+
+/* Cor do fundo pares */
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #ffffff; /* Cor branca */
+}
+
+/* Cor da linhas das tabelas e bordas */
+.table-bordered {
+  border: 1px solid #000; /* Cor da borda da tabela */
+}
+
+.table-bordered th,
+.table-bordered td,
+.table-bordered tr {
+  border: 1px solid #000; /* Cor da borda das células */
+  padding: 3px 15px;
+}
+
+.visualizar {
+  font-weight: 500;
+  padding: 3.5px 17px; /* Preenchimento interno dos botões */
+  font-size: 15px; /* Tamanho da fonte dos botões */
+  background-color: #0f921c;
+  color: #ffffff; /* Cor do texto dos botões */
+  border: none; /* Remove a borda dos botões */
+  border-radius: 8.89px; /* Borda arredondada dos botões */
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.visualizar:hover {
+  background-color: #37b944; /* Cor de fundo dos botões ao passar o mouse */
+  color: #ffe500;
+}
+
+.voltar {
+  justify-content: center;
+  align-items: flex-start;
+  width: 52.5%;
+  margin-top: 20px;
+}
+
+.voltar a i {
+  margin-right: 10px;
+}
+
+.voltar_btn {
+  color: #35383f; /* Cor padrão do botão */
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: 500;
+  font-size: 25px;
+  padding: 10px 13px;
+}
+
+.voltar_btn:hover {
+  color: #35383f;
+  text-decoration: none; /* Remove o sublinhado */
+  background-color: #f1f1f138;
+  border-radius: 8.89px;
+}

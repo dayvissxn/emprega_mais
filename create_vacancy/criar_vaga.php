@@ -23,16 +23,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $carga_horaria = $_POST['carga_horaria'];
     $descricao_vaga = $_POST['descricao'];
 
-// Executa a instrução SQL
-if ($stmt->execute()) {
-    // Recupera o ID da vaga recém-criada
-    $vaga_id = $conexao->insert_id;
+    // Executa a instrução SQL
+    if ($stmt->execute()) {
+        // Recupera o ID da vaga recém-criada
+        $vaga_id = $conexao->insert_id;
 
-    // Cria o nome da nova tabela usando o ID e o nome da vaga
-    $nome_tabela = "vaga_" . $vaga_id . "_" . preg_replace('/[^a-zA-Z0-9_]/', '', str_replace(' ', '_', $nome));
+        // Cria o nome da nova tabela usando o ID e o nome da vaga
+        $nome_tabela = "vaga_" . $vaga_id . "_" . preg_replace('/[^a-zA-Z0-9_]/', '', str_replace(' ', '_', $nome));
 
-    // Instrução SQL para criar uma nova tabela
-    $sql_create_table = "CREATE TABLE IF NOT EXISTS $nome_tabela (
+        // Instrução SQL para criar uma nova tabela
+        $sql_create_table = "CREATE TABLE IF NOT EXISTS $nome_tabela (
         id INT(11) AUTO_INCREMENT PRIMARY KEY,
         id_usuario INT NOT NULL,
         nome_completo VARCHAR(100) NOT NULL,
@@ -47,24 +47,23 @@ if ($stmt->execute()) {
         CONSTRAINT fk_usuario_{$vaga_id} FOREIGN KEY (id_usuario) REFERENCES usuarios(id) ON DELETE CASCADE ON UPDATE CASCADE
     )";
 
-    // Executa a instrução para criar a tabela
-    if ($conexao->query($sql_create_table) === TRUE) {
-        $message = "VAGA CRIADA COM SUCESSO!";
+        // Executa a instrução para criar a tabela
+        if ($conexao->query($sql_create_table) === TRUE) {
+            $message = "VAGA CRIADA COM SUCESSO!";
+        } else {
+            $message = "Vaga criada, mas erro ao criar tabela: " . $conexao->error;
+        }
     } else {
-        $message = "Vaga criada, mas erro ao criar tabela: " . $conexao->error;
+        $message = "Erro ao salvar os dados no banco de dados: " . $stmt->error;
     }
-} else {
-    $message = "Erro ao salvar os dados no banco de dados: " . $stmt->error;
-}
 
-// Fecha a instrução
-$stmt->close();
+    // Fecha a instrução
+    $stmt->close();
 
-// Redireciona com uma mensagem de sucesso ou erro
-header("Location: criar_vaga.html?message=" . urlencode($message));
-exit();
+    // Redireciona com uma mensagem de sucesso ou erro
+    header("Location: criar_vaga.html?message=" . urlencode($message));
+    exit();
 }
 
 // Fecha a conexão com o banco de dados
 $conexao->close();
-?>

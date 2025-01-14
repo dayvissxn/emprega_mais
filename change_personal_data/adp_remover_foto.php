@@ -24,7 +24,7 @@ if (isset($_SESSION['id_usuario'])) {
     mysqli_stmt_close($stmt);
 
     $_SESSION['mensagem'] = "Foto de perfil removida com sucesso!";
-    header("Location: alterar_dados_pessoais.php");
+    header("Location: alterar_dados_pessoais_html.php");
     exit();
 }
 ?>

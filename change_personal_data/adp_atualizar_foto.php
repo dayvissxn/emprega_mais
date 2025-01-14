@@ -22,7 +22,7 @@ if (isset($_SESSION['id_usuario'])) {
 
         $_SESSION['mensagem'] = "Foto de perfil atualizada com sucesso!";
     }
-    header("Location: alterar_dados_pessoais.php");
+    header("Location: alterar_dados_pessoais_html.php");
     exit();
 
     // Exemplo de validação de tamanho e tipo de imagem
