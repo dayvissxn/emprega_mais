@@ -22,7 +22,7 @@ $caminho_fotoperfil = isset($_SESSION['caminho_fotoperfil']) ? $_SESSION['caminh
 include('../login/conexao_login.php');
 
 // Query para buscar os dados do usuário no banco de dados
-$sql = "SELECT caminho_fotoperfil FROM usuarios WHERE id = ?";
+$sql = "SELECT caminho_fotoperfil, tipo_usuario FROM usuarios WHERE id = ?";
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("i", $id_usuario);
 $stmt->execute();
@@ -31,6 +31,7 @@ $result = $stmt->get_result();
 if ($result && $result->num_rows > 0) {
     $dados_usuario = $result->fetch_assoc();
     $caminho_fotoperfil = $dados_usuario['caminho_fotoperfil'];
+    $tipo_usuario = $dados_usuario['tipo_usuario']; // Adiciona o tipo de usuário
 } else {
     // Caso não encontre o usuário, redireciona para a página de login
     header("Location: ../login/login_html.php");

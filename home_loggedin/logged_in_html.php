@@ -46,7 +46,9 @@
             <div class="dropdown-content">
                 <a href="../change_personal_data/alterar_dados_pessoais_html.php"><i class="fa-solid fa-user"></i> Perfil</a>
                 <a href="../my_vacancies/minhas_vagas_html.php"><i class="fa-solid fa-circle-check"></i> Minhas vagas</a>
-                <a href="../create_vacancy/criar_vaga.html"><i class="fa-solid fa-cog"></i> Configurações</a>
+                <?php if (isset($tipo_usuario) && $tipo_usuario === 'admin'): ?>
+                    <a href="../create_vacancy/criar_vaga.html"><i class="fa-solid fa-cog"></i> Configurações</a>
+                <?php endif; ?>
                 <a href="../home_page/inicio_html.php"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
             </div>
         </div>
